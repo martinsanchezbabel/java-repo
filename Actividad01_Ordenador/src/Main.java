@@ -123,6 +123,7 @@ public class Main {
 		
 		//System.out.println(ordenador.getGraficaList());
 		System.out.println("El precio total del ordenador será de: " + ordenador.calcularPrecioComponentes() +"€");
+		System.out.println(ordenador);
 	}
 
 }

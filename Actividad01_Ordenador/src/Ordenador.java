@@ -114,8 +114,8 @@ public class Ordenador {
 
 	@Override
 	public String toString() {
-		return "Ordenador [precio=" + precio + ", marca=" + marca + ", ramList=" + ramList + ", graficaList="
-				+ graficaList + ", perifList=" + perifList + ", procesador=" + procesador + ", placaBase=" + placaBase
+		return "Ordenador [precio=" + precio + ", marca=" + marca + ",\n \n ramList=" + ramList + ",\n \n graficaList="
+				+ graficaList + ", \n \n perifList=" + perifList + ", \n \n procesador=" + procesador + ",\n \n placaBase=" + placaBase
 				+ "]";
 	}
 
