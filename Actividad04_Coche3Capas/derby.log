@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Oct 11 16:20:59 CEST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-017c-6fba-6653-00000f27c3f0 
+on database directory C:\Users\martin.sanchez\eclipse-workspace\git-workspace\Actividad04_Coche3Capas\bbdd with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2cdf8d8a 
+Loaded from file:/C:/Users/martin.sanchez/eclipse-workspace/git-workspace/Actividad04_Coche3Capas/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.12+8-LTS-237
+user.dir=C:\Users\martin.sanchez\eclipse-workspace\git-workspace\Actividad04_Coche3Capas
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
