@@ -20,7 +20,7 @@ public class GestorCoche {
 	
 	public boolean alta(Coche c){
 		//aplicamos la regla de negocio
-		if(c.getMatricula().length() == 7  ) {
+		if(c.getMatricula().length() == 7   && !c.getMarca().isEmpty() && !c.getModelo().isEmpty() && !c.getMatricula().isEmpty() ) {
 			boolean alta = cocheDao.alta(c);
 			return alta;
 		}
@@ -34,7 +34,7 @@ public class GestorCoche {
 	
 	public boolean modificar(Coche c){
 		//aplicamos la regla de negocio
-		if(c.getMatricula().length() == 7) {
+		if(c.getMatricula().length() == 7 && !c.getMarca().isEmpty() && !c.getModelo().isEmpty() && !c.getMatricula().isEmpty()) {
 			boolean modificada = cocheDao.modificar(c);
 			return modificada;
 		}

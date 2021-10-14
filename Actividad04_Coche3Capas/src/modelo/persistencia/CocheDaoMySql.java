@@ -16,7 +16,7 @@ public class CocheDaoMySql implements CocheDao{
 	private Connection conexion;
 	
 	public boolean abrirConexion(){
-		String url = "jdbc:mysql://localhost:3306/bbdd";
+		String url = "jdbc:mysql://localhost:3306/coche";
 		String usuario = "root";
 		String password = "";
 		try {
@@ -105,8 +105,7 @@ public class CocheDaoMySql implements CocheDao{
 			return false;
 		}
 		boolean modificado = true;
-		String query = "update coches set MARCA=?, MODELO=?, \"\n"
-				+ "				+ \"NUMKM=? WHERE MATRICULA=?";
+		String query = "update coches set MARCA=?, MODELO=?, NUMKM=? WHERE MATRICULA=?";
 		try {
 			PreparedStatement ps = conexion.prepareStatement(query);
 			ps.setString(1, c.getMarca());
@@ -139,8 +138,7 @@ public class CocheDaoMySql implements CocheDao{
 		}		
 		Coche coche = null;
 		
-		String query = "select matricula, marca, modelo, numKm from coches"
-				+ "where matricula = '?'";
+		String query = "select * from coches where matricula = ?";
 		try {
 			PreparedStatement ps = conexion.prepareStatement(query);
 			ps.setString(1, matricula);
