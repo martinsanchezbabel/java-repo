@@ -1,12 +1,29 @@
 package modelo.entidad;
 
+//Entidad Coche utilizada para la creacion de objetos con el fin de ser almacenada en una BBDD
 public class Coche {
 
+	// Atributos propios de la clase
 	private String matricula;
 	private String marca;
 	private String modelo;
 	private int numKm;
 
+	// Constructor vacio
+	public Coche() {
+		super();
+	}
+
+	// Constructor con todos los atributos
+	public Coche(String matricula, String marca, String modelo, int numKm) {
+		super();
+		this.matricula = matricula;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.numKm = numKm;
+	}
+
+	// Getters y setters
 	public String getMatricula() {
 		return matricula;
 	}

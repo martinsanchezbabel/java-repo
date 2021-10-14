@@ -12,43 +12,74 @@ import modelo.persistencia.interfaces.CocheDao;
 //menos un nombre con 3 caracteres 
 
 public class GestorCoche {
-	
-	//Aqui podemos jugar con cambiar el dao que queremos usar
-	//podemos usar PersonaDaoDerby o PersonaDaoMySql
-	//Gracias a las interfaces solo tenemos que cambiar el objeto
+
+	// Aqui podemos jugar con cambiar el dao que queremos usar
+	// podemos usar PersonaDaoDerby o PersonaDaoMySql
+	// Gracias a las interfaces solo tenemos que cambiar el objeto
 	CocheDao cocheDao = new CocheDaoMySql();
-	
-	public boolean alta(Coche c){
-		//aplicamos la regla de negocio
-		if(c.getMatricula().length() == 7   && !c.getMarca().isEmpty() && !c.getModelo().isEmpty() && !c.getMatricula().isEmpty() ) {
+
+	/**
+	 * Metodo para dar de alta un coche
+	 * 
+	 * @param c
+	 * @return true si el coche se dio de alta false si no
+	 */
+	public boolean alta(Coche c) {
+		// aplicamos la regla de negocio
+		if (c.getMatricula().length() == 7 && !c.getMarca().isEmpty() && !c.getModelo().isEmpty()
+				&& !c.getMatricula().isEmpty()) {
 			boolean alta = cocheDao.alta(c);
 			return alta;
 		}
 		return false;
 	}
-	
-	public boolean baja(String matricula){
+
+	/**
+	 * Metodo para dar de baja un coche
+	 * 
+	 * @param matricula
+	 * @return true si el coche se dio de baja false si no
+	 */
+	public boolean baja(String matricula) {
 		boolean baja = cocheDao.baja(matricula);
 		return baja;
 	}
-	
-	public boolean modificar(Coche c){
-		//aplicamos la regla de negocio
-		if(c.getMatricula().length() == 7 && !c.getMarca().isEmpty() && !c.getModelo().isEmpty() && !c.getMatricula().isEmpty()) {
+
+	/**
+	 * Metodo para modificar los datos de un coche
+	 * 
+	 * @param c
+	 * @return
+	 */
+	public boolean modificar(Coche c) {
+		// aplicamos la regla de negocio
+		if (c.getMatricula().length() == 7 && !c.getMarca().isEmpty() && !c.getModelo().isEmpty()
+				&& !c.getMatricula().isEmpty()) {
 			boolean modificada = cocheDao.modificar(c);
 			return modificada;
 		}
 		return false;
 	}
-	
-	public Coche obtener(String matricula){
+
+	/**
+	 * Metodo para obtener los datos de un coche
+	 * 
+	 * @param matricula
+	 * @return
+	 */
+	public Coche obtener(String matricula) {
 		Coche coche = cocheDao.obtener(matricula);
 		return coche;
 	}
-	
-	public List<Coche> listar(){
+
+	/**
+	 * Metodo para obtener los datos de todos los coches
+	 * 
+	 * @return una lista con los datos de todos los coches
+	 */
+	public List<Coche> listar() {
 		List<Coche> listaCoches = cocheDao.listar();
 		return listaCoches;
 	}
-	
+
 }
