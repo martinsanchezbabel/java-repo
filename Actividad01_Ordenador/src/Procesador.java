@@ -1,11 +1,21 @@
-
+/**
+ * Clase procesador
+ * 
+ * @author martin.sanchez
+ *
+ */
 public class Procesador {
-
+	/**
+	 * Atributos
+	 */
 	private double precio;
 	private double hz;
 	private String marca;
 	private TarjetaGrafica tarjetaGrafica;
 
+	/**
+	 * Constructores vacio y con paramteros
+	 */
 	public Procesador() {
 		super();
 	}
@@ -18,6 +28,9 @@ public class Procesador {
 		this.tarjetaGrafica = tarjetaGrafica;
 	}
 
+	/**
+	 * Getters y setters
+	 */
 	public double getPrecio() {
 		return precio;
 	}

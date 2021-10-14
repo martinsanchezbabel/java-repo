@@ -1,10 +1,22 @@
 
+/**
+ * Clase periferico
+ * 
+ * @author martin.sanchez
+ *
+ */
 public class Periferico {
 
+	/**
+	 * Atributos
+	 */
 	private String nombre;
 	private double precio;
 	private String marca;
 
+	/**
+	 * Constructores vacio y con paramteros
+	 */
 	public Periferico() {
 		super();
 	}
@@ -16,6 +28,9 @@ public class Periferico {
 		this.marca = marca;
 	}
 
+	/**
+	 * Getters y setters
+	 */
 	public String getNombre() {
 		return nombre;
 	}

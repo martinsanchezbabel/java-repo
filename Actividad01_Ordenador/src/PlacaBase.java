@@ -1,10 +1,20 @@
-
+/**
+ * Clase placaBase
+ * 
+ * @author martin.sanchez
+ *
+ */
 public class PlacaBase {
-
+	/**
+	 * Atributos
+	 */
 	private double precio;
 	private String marca;
 	private String modelo;
 
+	/**
+	 * Constructores vacio y con paramteros
+	 */
 	public PlacaBase() {
 		super();
 	}
@@ -16,6 +26,9 @@ public class PlacaBase {
 		this.modelo = modelo;
 	}
 
+	/**
+	 * Getters y setters
+	 */
 	public double getPrecio() {
 		return precio;
 	}

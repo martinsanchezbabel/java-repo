@@ -1,11 +1,21 @@
-
+/**
+ * Clase TarjetaGrafica
+ * 
+ * @author martin.sanchez
+ *
+ */
 public class TarjetaGrafica {
-
+	/**
+	 * Atributos
+	 */
 	private double precio;
 	private String marca;
 	private Ram ram;
 	private String modelo;
 
+	/**
+	 * Constructores vacio y con paramteros
+	 */
 	public TarjetaGrafica() {
 		super();
 	}
@@ -18,6 +28,9 @@ public class TarjetaGrafica {
 		this.modelo = modelo;
 	}
 
+	/**
+	 * Getters y setters
+	 */
 	public double getPrecio() {
 		return precio;
 	}

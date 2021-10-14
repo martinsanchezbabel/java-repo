@@ -1,9 +1,21 @@
-
+/**
+ * Clase Ram
+ * 
+ * @author martin.sanchez
+ *
+ */
 public class Ram {
+
+	/**
+	 * Atributos
+	 */
 	private double precio;
 	private double hz;
 	private String generacion;
 
+	/**
+	 * Constructores vacio y con paramteros
+	 */
 	public Ram() {
 		super();
 	}
@@ -15,6 +27,9 @@ public class Ram {
 		this.generacion = generacion;
 	}
 
+	/**
+	 * Getters y setters
+	 */
 	public double getPrecio() {
 		return precio;
 	}
