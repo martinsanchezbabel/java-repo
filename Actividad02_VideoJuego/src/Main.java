@@ -302,6 +302,7 @@ public class Main {
 		return c;
 	}
 
+	// Metodo para crear una espada con un daño aleatorio entre 1 y 10
 	public static Espada crearEspada() {
 		int atributo;
 		Espada e;
