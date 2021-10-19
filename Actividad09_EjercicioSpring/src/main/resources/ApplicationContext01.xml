@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="superheroe1" class="modelo.entidad.Superheroe"
+		scope="singleton">
+		<property name="id" value="1"></property>
+		<property name="nombre" value="Superman"></property>
+		<property name="poder" value="200"></property>
+		<property name="superpoder" value="Superfuerza"></property>
+	</bean>
+	<bean id="superheroe2" class="modelo.entidad.Superheroe"
+		scope="singleton">
+		<property name="id" value="2"></property>
+		<property name="nombre" value="Batman"></property>
+		<property name="poder" value="150"></property>
+		<property name="superpoder" value="Dinero"></property>
+	</bean>
+	<bean id="superheroe3" class="modelo.entidad.Superheroe"
+		scope="singleton">
+		<property name="id" value="3"></property>
+		<property name="nombre" value="Spiderman"></property>
+		<property name="poder" value="130"></property>
+		<property name="superpoder" value="Telaraña"></property>
+	</bean>
+	
+	<bean id="plantillaSuperheroe1" class="modelo.entidad.Superheroe"
+		scope="prototype">
+		<property name="poder" value="100"></property>
+	</bean>
+	
+	<bean id="plantillaSuperheroe2" class="modelo.entidad.Superheroe"
+		scope="prototype">
+		<property name="superpoder" value="Volar"></property>
+	</bean>
+	
+	<bean id="listaSuperHeroesPoder" class="java.util.ArrayList"></bean>
+	<bean id="listaSuperHeroesSuperPoder" class="java.util.ArrayList"></bean>
+</beans>
