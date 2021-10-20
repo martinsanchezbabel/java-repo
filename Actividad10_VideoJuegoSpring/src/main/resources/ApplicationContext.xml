@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="batalla" class="negocio.Batalla">
+		<property name="p1" ref="mago"></property>
+		<property name="p2" ref="curandero"></property>
+	</bean>
+	
+	<bean id="hechizo" class="entidad.Hechizo">
+		<property name="danioMinimo" value="10"></property>
+		<property name="danioMaximo" value="20"></property>
+		<property name="porcentajeCritico" value="20"></property>
+		<property name="poderHechizo" value="20"></property>
+		<property name="personaje" ref="mago"></property>
+	</bean>
+	
+	<bean id="mago" class="entidad.Mago">
+		<property name="inteligencia" value="10"></property>
+		<property name="nombre" value="Gandalf"></property>
+		<property name="vida" value="200"></property>
+		<property name="arma" ref="hechizo"></property>
+	</bean>
+	
+	<bean id="rezo" class="entidad.Rezo">
+		<property name="danioMinimo" value="10"></property>
+		<property name="danioMaximo" value="20"></property>
+		<property name="porcentajeCritico" value="20"></property>
+		<property name="poderCuracion" value="10"></property>
+		<property name="personaje" ref="curandero"></property>
+	</bean>
+	
+	<bean id="curandero" class="entidad.Curandero">
+		<property name="sabiduria" value="10"></property>
+		<property name="nombre" value="Saruman"></property>
+		<property name="vida" value="200"></property>
+		<property name="arma" ref="rezo"></property>
+	</bean>
+	
+
+</beans>
