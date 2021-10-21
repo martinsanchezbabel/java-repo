@@ -1,0 +1,11 @@
+Ordenador [precio=2000.0, marca=Dell,
+ 
+ ramList=[Ram [precio=139.0, hz=2000.0, generacion=8], Ram [precio=117.0, hz=3000.0, generacion=10]],
+ 
+ graficaList=[TarjetaGrafica [precio=275.0, marca=Samsung, ram=Ram [precio=130.0, hz=1000.0, generacion=8], modelo=Segundo], TarjetaGrafica [precio=256.0, marca=Nvidia, ram=Ram [precio=117.0, hz=3500.0, generacion=7], modelo=Tercero]], 
+ 
+ perifList=[Periferico [precio=170.0, marca=Dell], Periferico [precio=132.0, marca=Lenovo], Periferico [precio=15.0, marca=LG]], 
+ 
+ procesador=Procesador [precio=380.0, hz=6000.0, marca=Nvidia, tarjetaGraficaProcesador=TarjetaGrafica [precio=245.0, marca=Nvidia, ram=Ram [precio=143.0, hz=3500.0, generacion=7], modelo=Primero]],
+ 
+ placaBase=PlacaBase [precio=170.0, marca=LG, modelo=Tercero]]

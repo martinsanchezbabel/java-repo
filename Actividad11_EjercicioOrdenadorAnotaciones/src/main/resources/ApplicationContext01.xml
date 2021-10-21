@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<context:component-scan base-package="modelo"></context:component-scan>
 
 
 	<!-- Llamamos a Util -->
@@ -96,16 +100,6 @@
 	</bean>
 
 
-	<!-- Creamos el procesador -->
-
-	<bean id="procesador" class="modelo.entidad.Procesador"
-		autowire="byName">
-		<property name="hz" value="20"></property>
-		<property name="precio"
-			value="#{util.generateRandomNumber(100,200)}"></property>
-		<property name="marca" value="#{util.getRandomMarca()}"></property>
-
-	</bean>
 	<!-- Creamos la lista de RAM -->
 
 	<bean id="ramListOrdenador" class="java.util.ArrayList">
@@ -140,21 +134,6 @@
 		</constructor-arg>
 	</bean>
 
-	<!--  
-		<bean id="calcPrecio" class="org.springframework.beans.factory.config.MethodInvokingBean"> 
-		<property name="targetObject" ref="ordenadorClase" /> <property name="targetMethod" 
-		value="calcularPrecioComponentes" /> </bean> -->
-<bean id="ordenadorClase" class="modelo.entidad.Ordenador"></bean>
-	<!-- Creamos el ordenador -->
-	<bean id="Ordenador" class="modelo.entidad.Ordenador"
-		autowire="byName">
-		<property name="precio" value="#{ordenadorClase.calcularPrecioComponentes()}"> <!--ref="calcPrecio" -->
-
-		</property>
-
-		<property name="marca" value="#{util.getRandomMarca()}"></property>
-
-	</bean>
 
 
 </beans>

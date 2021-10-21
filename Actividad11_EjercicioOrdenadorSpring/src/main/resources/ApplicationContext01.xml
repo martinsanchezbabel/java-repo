@@ -95,13 +95,6 @@
 		<property name="nombre" value="Altavoces"></property>
 	</bean>
 
-	<!-- Creamos la placa base -->
-	<bean id="placaBase" class="modelo.entidad.PlacaBase">
-		<property name="precio"
-			value="#{util.generateRandomNumber(100,200)}"></property>
-		<property name="marca" value="#{util.getRandomMarca()}"></property>
-		<property name="modelo" value="Primero"></property>
-	</bean>
 
 	<!-- Creamos el procesador -->
 
