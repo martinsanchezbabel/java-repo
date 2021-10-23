@@ -82,6 +82,10 @@ public class Ordenador {
 
 		return precioTotal;
 	}
+	
+	public void inicializador() {
+		this.precio = calcularPrecioComponentes();
+	}
 
 	/**
 	 * 

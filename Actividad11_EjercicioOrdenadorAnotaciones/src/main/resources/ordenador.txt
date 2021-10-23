@@ -1,11 +1,11 @@
-Ordenador [precio=0.0, marca=Nvidia,
+Ordenador [precio=0.0, marca=Samsung,
  
- ramList=[Ram [precio=171.0, hz=8.0, generacion=8], Ram [precio=120.0, hz=3.0, generacion=3]],
+ ramList=[Ram [precio=195.0, hz=8.0, generacion=8], Ram [precio=130.0, hz=3.0, generacion=3]],
  
- graficaList=[TarjetaGrafica [precio=265.0, marca=Dell, ram=Ram [precio=132.0, hz=5.0, generacion=5], modelo=Segundo], TarjetaGrafica [precio=349.0, marca=Samsung, ram=Ram [precio=199.0, hz=6.0, generacion=6], modelo=Primero]], 
+ graficaList=[TarjetaGrafica [precio=348.0, marca=Nvidia, ram=Ram [precio=157.0, hz=5.0, generacion=5], modelo=Segundo], TarjetaGrafica [precio=303.0, marca=Dell, ram=Ram [precio=118.0, hz=6.0, generacion=6], modelo=Primero]], 
  
- perifList=[Periferico [precio=161.0, marca=Samsung], Periferico [precio=141.0, marca=LG], Periferico [precio=172.0, marca=Dell]], 
+ perifList=[Periferico [precio=175.0, marca=Dell], Periferico [precio=164.0, marca=Dell], Periferico [precio=128.0, marca=LG]], 
  
- procesador=Procesador [precio=119.0, hz=1.0, marca=Samsung, tarjetaGraficaProcesador=TarjetaGrafica [precio=300.0, marca=Samsung, ram=Ram [precio=150.0, hz=2.0, generacion=2], modelo=Primero]],
+ procesador=Procesador [precio=152.0, hz=4.0, marca=Nvidia, tarjetaGraficaProcesador=TarjetaGrafica [precio=253.0, marca=Nvidia, ram=Ram [precio=117.0, hz=2.0, generacion=2], modelo=Primero]],
  
- placaBase=PlacaBase [precio=170.0, marca=Samsung, modelo=Segundo]]
+ placaBase=PlacaBase [precio=175.0, marca=Nvidia, modelo=Segundo]]

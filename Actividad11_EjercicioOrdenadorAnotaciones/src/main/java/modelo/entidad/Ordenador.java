@@ -28,13 +28,13 @@ public class Ordenador {
 	 * ArrayList para almacenar las distintas Ram, TarjetaGrafica y Periferico
 	 */
 	@Autowired
-	@Qualifier("ramListOrdenador")
+	//@Qualifier("ramListOrdenador")
 	private ArrayList<Ram> ramListOrdenador = new ArrayList<Ram>();
 	@Autowired
-	@Qualifier("graficaListOrdenador")
+	//@Qualifier("graficaListOrdenador")
 	private ArrayList<TarjetaGrafica> graficaListOrdenador = new ArrayList<TarjetaGrafica>();
 	@Autowired
-	@Qualifier("perifListOrdenador")
+	//@Qualifier("perifListOrdenador")
 	private ArrayList<Periferico> perifListOrdenador = new ArrayList<Periferico>();
 
 	/**

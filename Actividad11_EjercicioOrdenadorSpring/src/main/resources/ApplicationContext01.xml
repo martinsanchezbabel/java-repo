@@ -147,10 +147,7 @@
 <bean id="ordenadorClase" class="modelo.entidad.Ordenador"></bean>
 	<!-- Creamos el ordenador -->
 	<bean id="Ordenador" class="modelo.entidad.Ordenador"
-		autowire="byName">
-		<property name="precio" value="#{ordenadorClase.calcularPrecioComponentes()}"> <!--ref="calcPrecio" -->
-
-		</property>
+		autowire="byName" init-method="inicializador">
 
 		<property name="marca" value="#{util.getRandomMarca()}"></property>
 
