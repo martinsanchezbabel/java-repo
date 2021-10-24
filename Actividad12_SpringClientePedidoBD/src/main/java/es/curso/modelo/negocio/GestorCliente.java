@@ -1,6 +1,8 @@
 package es.curso.modelo.negocio;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import es.curso.modelo.entidades.Cliente;
 import es.curso.modelo.entidades.Pedido;
-import es.curso.modelo.entidades.Pelicula;
 import es.curso.modelo.persistencia.DaoCliente;
 
 @Service
@@ -32,8 +33,11 @@ public class GestorCliente {
 	}
 
 	public int insertarPedidoCliente(Pedido p, int id) {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String fechaString;
 		if (!"".equals(p.getImporte()) || !"".equals(p.getFecha())) {
-			System.out.println("El pedido de importe: " + p.getImporte() + " realiado en la fecha: " + p.getFecha()
+			fechaString = sdf.format(p.getFecha());
+			System.out.println("El pedido de importe " + p.getImporte() + "€ realizado en la fecha " + fechaString
 					+ " fue dado de alta al cliente con ID " + id);
 			return daoCliente.insertarPedidoCliente(p, id);
 		}
@@ -50,15 +54,19 @@ public class GestorCliente {
 	}
 
 	public int borrar(int id) {
-		System.out.println("Cliente con ID " + id + " borrado.");
+		if (daoCliente.buscarID(id) == null) {
+			System.out.println("No existen clientes con el ID: " + id);
+		} else {
+			System.out.println("Cliente con ID " + id + " borrado.");
+		}
 		return daoCliente.borrar(id);
 	}
 
 	public Cliente buscarID(int id) {
-		if(daoCliente.buscarID(id) == null) {
-		System.out.println("No existen clientes con el ID: " + id);
+		if (daoCliente.buscarID(id) == null) {
+			System.out.println("No existen clientes con el ID: " + id);
 		} else {
-		System.out.println("Cliente con ID " + id + " encontrado: \n" + daoCliente.buscarID(id));
+			System.out.println("Cliente con ID " + id + " encontrado: \n" + daoCliente.buscarID(id));
 		}
 		return daoCliente.buscarID(id);
 	}
@@ -80,5 +88,9 @@ public class GestorCliente {
 					+ daoCliente.listarPedidoCliente(id));
 		}
 		return daoCliente.listarPedidoCliente(id);
+	}
+
+	public ArrayList<Cliente> listarCliente() {
+		return daoCliente.listarCliente();
 	}
 }

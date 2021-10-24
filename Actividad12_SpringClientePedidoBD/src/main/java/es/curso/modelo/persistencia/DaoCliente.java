@@ -20,4 +20,6 @@ public interface DaoCliente {
 	int insertarPedidoCliente(Pedido p, int id);
 
 	ArrayList<Pedido> listarPedidoCliente(int id);
+	
+	ArrayList<Cliente> listarCliente();
 }

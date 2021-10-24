@@ -28,9 +28,11 @@ public class MainJdbcTemplate {
 		Pedido p = context.getBean("pedido", Pedido.class);
 
 		do {
-			System.out.println("\n Buenas, ¿que desea hacer? \n1: Dar de alta un cliente. \n2: Dar de baja un cliente. "
-					+ "\n3: Modificar un cliente. \n4: Buscar un cliente por nombre. \n5: Buscar un cliente por ID. "
-					+ "\n6: Anadir un pedido a un cliente. \n7: Listar los pedidos de un cliente. \n8: Salir \n");
+			System.out.println("\n--------------------------------------");
+			System.out.println("Buenas, ¿que desea hacer? \n 1: Dar de alta un cliente. \n 2: Dar de baja un cliente. "
+					+ "\n 3: Modificar un cliente. \n 4: Buscar un cliente por nombre. \n 5: Buscar un cliente por ID. "
+					+ "\n 6: Anadir un pedido a un cliente. \n 7: Listar los pedidos de un cliente. \n 8: Salir");
+			System.out.println("--------------------------------------");
 			eleccion = sc.nextInt();
 
 			switch (eleccion) {
@@ -82,7 +84,8 @@ public class MainJdbcTemplate {
 	public static void bajaCliente() {
 		GestorCliente gc = context.getBean("gestorCliente", GestorCliente.class);
 		int id;
-		System.out.println("Introduzca el ID del cliente que deasea borrar: ");
+		System.out.println("Introduzca el ID del cliente de la lista que deasea borrar: ");
+		System.out.println(gc.listarCliente());
 		id = sc.nextInt();
 		gc.borrar(id);
 
@@ -92,14 +95,16 @@ public class MainJdbcTemplate {
 		GestorCliente gc = context.getBean("gestorCliente", GestorCliente.class);
 		Cliente c = new Cliente();
 		int id;
-		System.out.println("Introduzca el ID del cliente que deasea modificar: ");
+		System.out.println("Introduzca el ID del cliente de la lista que deasea modificar: ");
+		System.out.println(gc.listarCliente());
 		id = sc.nextInt();
-		System.out.println("Introduzca los nuevos datos del cliente: \nNOMBRE:");
-		c.setNombre(sc.next());
-		System.out.println("EDAD:");
-		c.setEdad(sc.nextInt());
-		gc.modificarCliente(c, id);
-
+		if (gc.buscarID(id) != null) {
+			System.out.println("Introduzca los nuevos datos del cliente: \nNOMBRE:");
+			c.setNombre(sc.next());
+			System.out.println("EDAD:");
+			c.setEdad(sc.nextInt());
+			gc.modificarCliente(c, id);
+		}
 	}
 
 	public static void buscaNombre() {
@@ -127,7 +132,8 @@ public class MainJdbcTemplate {
 		Date fechaDate;
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-		System.out.println("Introduce el ID del cliente: ");
+		System.out.println("Introduce el ID del cliente de la siguiente lista: ");
+		System.out.println(gc.listarCliente());
 		id = sc.nextInt();
 
 		System.out.println("introduzca los datos del pedido: \nIMPORTE (si tiene decimales ponga , )");
@@ -144,7 +150,8 @@ public class MainJdbcTemplate {
 	public static void buscaPedidosID() {
 		GestorCliente gc = context.getBean("gestorCliente", GestorCliente.class);
 		int id;
-		System.out.println("Introduzca el ID del cliente cuyos pedidos deasea buscar: ");
+		System.out.println("Introduzca el ID del cliente de la lista cuyos pedidos deasea buscar: ");
+		System.out.println(gc.listarCliente());
 		id = sc.nextInt();
 		gc.listarPedidoCliente(id);
 

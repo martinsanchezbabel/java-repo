@@ -50,7 +50,7 @@ public class Pedido {
 
 	@Override
 	public String toString() {
-		return "Pedido [id=" + id + ", importe=" + importe + ", fecha=" + fecha + "]";
+		return "PEDIDOS ID ["+ id + "] IMPORTE [" + importe + "€] FECHA [" + fecha + "]";
 	}
 
 }

@@ -88,4 +88,10 @@ public class DaoClienteJdbcTemplate implements DaoCliente {
 		return (ArrayList<Pedido>) jdbcTemplate.query(query, pedidoRowMapper, id);
 	}
 
+	@Override
+	public ArrayList<Cliente> listarCliente() {
+		String query = "select * from cliente";
+
+		return (ArrayList<Cliente>) jdbcTemplate.query(query, clienteRowMapper);
+	}
 }
