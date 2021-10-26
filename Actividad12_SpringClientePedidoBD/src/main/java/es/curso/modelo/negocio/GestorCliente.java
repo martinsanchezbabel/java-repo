@@ -32,18 +32,6 @@ public class GestorCliente {
 		return -1;
 	}
 
-	public int insertarPedidoCliente(Pedido p, int id) {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		String fechaString;
-		if (!"".equals(p.getImporte()) || !"".equals(p.getFecha())) {
-			fechaString = sdf.format(p.getFecha());
-			System.out.println("El pedido de importe " + p.getImporte() + "€ realizado en la fecha " + fechaString
-					+ " fue dado de alta al cliente con ID " + id);
-			return daoCliente.insertarPedidoCliente(p, id);
-		}
-		return -1;
-	}
-
 	public int modificarCliente(Cliente c, int id) {
 		if (!"".equals(c.getNombre()) || !"".equals(c.getEdad())) {
 			System.out.println("El cliente con ID " + id + " ahora tiene los siguientes datos NOMBRE: " + c.getNombre()
@@ -78,16 +66,6 @@ public class GestorCliente {
 			System.out.println("Cliente con nombre " + nombre + " encontrado: \n" + daoCliente.buscarNombre(nombre));
 		}
 		return daoCliente.buscarNombre(nombre);
-	}
-
-	public ArrayList<Pedido> listarPedidoCliente(int id) {
-		if (daoCliente.listarPedidoCliente(id).size() == 0) {
-			System.out.println("El cliente con ID " + id + " no tiene pedidos");
-		} else {
-			System.out.println("El cliente con ID " + id + " tiene los siguientes pedidos: \n"
-					+ daoCliente.listarPedidoCliente(id));
-		}
-		return daoCliente.listarPedidoCliente(id);
 	}
 
 	public ArrayList<Cliente> listarCliente() {

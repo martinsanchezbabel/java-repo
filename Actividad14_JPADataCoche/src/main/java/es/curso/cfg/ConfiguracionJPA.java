@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -32,7 +33,7 @@ public class ConfiguracionJPA {
 		//configuracion para mysql
 		ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		//IMPORTANTE, el esquema de bbdd debe de estar creado (jpa_spring)
-		ds.setUrl("jdbc:mysql://localhost:3306/jpa_coche?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+		ds.setUrl("jdbc:mysql://localhost:3306/jpa_data_spring?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
 		ds.setUsername("root");
 		ds.setPassword("");
 		//Configuracion H2

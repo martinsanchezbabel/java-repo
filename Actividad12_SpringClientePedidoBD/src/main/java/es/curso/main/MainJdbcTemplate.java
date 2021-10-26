@@ -12,6 +12,7 @@ import es.curso.config.Configuracion;
 import es.curso.modelo.entidades.Cliente;
 import es.curso.modelo.entidades.Pedido;
 import es.curso.modelo.negocio.GestorCliente;
+import es.curso.modelo.negocio.GestorPedido;
 
 public class MainJdbcTemplate {
 
@@ -23,9 +24,6 @@ public class MainJdbcTemplate {
 
 		int eleccion = 0;// Inicializaos a 0 la eleccion para que entre en el bucle de abajo y no elija
 							// ninguno de los casos propuestos
-
-		Cliente c = context.getBean("cliente", Cliente.class);
-		Pedido p = context.getBean("pedido", Pedido.class);
 
 		do {
 			System.out.println("\n--------------------------------------");
@@ -66,7 +64,7 @@ public class MainJdbcTemplate {
 				break;
 			}
 
-		} while (eleccion != 8);// Al elegir la 5ta opcion el programa se detendra
+		} while (eleccion != 8);// Al elegir la 8va opcion el programa se detendra
 		System.out.println("¡Hasta luego!");
 	}
 
@@ -127,6 +125,7 @@ public class MainJdbcTemplate {
 
 	public static void altaPedidoCliente() throws ParseException {
 		GestorCliente gc = context.getBean("gestorCliente", GestorCliente.class);
+		GestorPedido gp = context.getBean("gestorPedido", GestorPedido.class);
 		Pedido p = new Pedido();
 		int id;
 		Date fechaDate;
@@ -143,17 +142,18 @@ public class MainJdbcTemplate {
 		fechaDate = sdf.parse(sc.next());
 		p.setFecha(fechaDate);
 
-		gc.insertarPedidoCliente(p, id);
+		gp.insertarPedidoCliente(p, id);
 
 	}
 
 	public static void buscaPedidosID() {
 		GestorCliente gc = context.getBean("gestorCliente", GestorCliente.class);
+		GestorPedido gp = context.getBean("gestorPedido", GestorPedido.class);
 		int id;
 		System.out.println("Introduzca el ID del cliente de la lista cuyos pedidos deasea buscar: ");
 		System.out.println(gc.listarCliente());
 		id = sc.nextInt();
-		gc.listarPedidoCliente(id);
+		gp.listarPedidoCliente(id);
 
 	}
 	// p.setImporte(22.5);

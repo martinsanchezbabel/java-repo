@@ -6,7 +6,7 @@ import es.curso.modelo.entidades.Cliente;
 import es.curso.modelo.entidades.Pedido;
 
 public interface DaoCliente {
-	
+
 	int insertarCliente(Cliente c);
 
 	int modificarCliente(Cliente c, int id);
@@ -17,9 +17,5 @@ public interface DaoCliente {
 
 	ArrayList<Cliente> buscarNombre(String nombre);
 
-	int insertarPedidoCliente(Pedido p, int id);
-
-	ArrayList<Pedido> listarPedidoCliente(int id);
-	
 	ArrayList<Cliente> listarCliente();
 }
