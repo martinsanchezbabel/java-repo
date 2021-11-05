@@ -1,0 +1,4 @@
+INSERT INTO videojuegos (author, compania, imagen, nombre, nota, price) values("Tariyaki", "From Software", "imagen-default.jpg", "Dark Souls 1", 9, 20);
+INSERT INTO videojuegos (author, compania, imagen, nombre, nota, price) values("Tariyaki", "From Software", "imagen-default.jpg", "Dark Souls 2", 9, 20);
+INSERT INTO videojuegos (author, compania, imagen, nombre, nota, price) values("Tariyaki", "From Software", "imagen-default.jpg", "Dark Souls 3", 7, 20);
+INSERT INTO videojuegos (author, compania, imagen, nombre, nota, price) values("Tariyaki", "From Software", "imagen-default.jpg", "Sekiro", 9, 20);

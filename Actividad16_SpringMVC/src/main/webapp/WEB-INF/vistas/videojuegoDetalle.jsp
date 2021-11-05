@@ -141,7 +141,8 @@ button:last-of-type:hover {
 
 	<div class="card">
 
-		<img src="${videojuego.imagen}" alt="imagenJuego">
+		<img src="${pageContext.request.contextPath}/${videojuego.imagen}"
+			alt="imagenJuego">
 		<h2>${videojuego.nombre }</h2>
 
 		<div>
